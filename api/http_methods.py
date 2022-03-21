@@ -1,5 +1,4 @@
 import requests
-import json_samp.json_var as jv
 from api.utils import print_response
 
 def send_post_pet(host: str, pet_json: dict) -> requests.Response:

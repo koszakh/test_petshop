@@ -1,9 +1,9 @@
-import json
+import variables as var
 
-petId = 123
-petName = "Dog123"
-categoryId = 1
-categoryName = "Dogs"
+petId = var.PET_ID#123
+petName = var.PET_NAME#"Dog123"
+categoryId = var.CATEGORY_ID#1
+categoryName = var.CATEGORY_NAME#"Dogs"
 
 dct = {
   "id": petId,
@@ -23,6 +23,3 @@ dct = {
   ],
   "status": "available"
 }
-
-json_str = json.dumps(dct, indent=True)
-print(json_str, type(json_str))
