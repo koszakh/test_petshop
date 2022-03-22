@@ -1,5 +1,6 @@
 import json
 import requests
+import json_var as jv
 
 # Displaying information about a request
 def print_response(response: requests.Response):
@@ -16,3 +17,7 @@ def get_json(f_name):
     f = open(f_name)
     pet_json = json.load(f)
     return pet_json
+
+# Get dict data from a python file
+def get_var_json():
+    return jv.dct

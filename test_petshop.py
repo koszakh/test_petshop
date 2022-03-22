@@ -1,8 +1,7 @@
 import pytest
 from api.http_methods import send_post_pet, send_get_pet, send_del_pet
-from api.utils import get_json
+from api.utils import get_json, get_var_json
 import variables as var
-import json_var as jv
 
 petshopUrl = var.PETSHOP_URL
 jsonName = var.JSON_NAME
@@ -16,7 +15,7 @@ def test_post():
 
 # Testing adding a pet with variables
 def test_post_var():
-    pet_json = jv.dct
+    pet_json = get_var_json()
     response = send_post_pet(petshopUrl, pet_json)
     assert response.status_code == 200
 
