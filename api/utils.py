@@ -1,10 +1,7 @@
-import logging
 import json
 import requests
 
-LOGGER = logging.getLogger(__name__)
-
-
+# Displaying information about a request
 def print_response(response: requests.Response):
     # request
     print("\nSend {} {} HTTP {}".format(response.request.method, response.url, response.status_code))
@@ -14,6 +11,7 @@ def print_response(response: requests.Response):
     # response
     print("Response body: {}".format(response.text))
 
+# Get data from a json-file
 def get_json(f_name):
     f = open(f_name)
     pet_json = json.load(f)
