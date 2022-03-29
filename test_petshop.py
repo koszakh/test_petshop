@@ -19,17 +19,6 @@ def test_post_var():
     response = send_post_pet(petshopUrl, pet_json)
     assert response.status_code == 200
 
-def test_test():
-    pet_json = get_var_json()
-    resp_post = send_post_pet(petshopUrl, pet_json)
-    pet_name = get_req_pet_name(resp_post)
-    assert resp_post.status_code == 200
-
-    resp_get = send_get_pet(petshopUrl, petId)
-    pet_name_get = get_resp_pet_name(resp_get)
-    assert resp_get.status_code == 200
-    assert pet_name == pet_name_get
-
 # Testing getting data about a pet by id
 def test_get():
     response = send_get_pet(petshopUrl, petId)
